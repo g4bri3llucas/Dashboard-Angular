@@ -1,0 +1,41 @@
+.app-container {
+  height: calc(100vh - 64px); /* Altura total menos a altura da toolbar */
+}
+
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.app-sidenav {
+  width: 250px;
+  border-right: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.menu-header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #f8f9fa;
+}
+
+.app-content {
+  background-color: #f4f6f8;
+}
+
+.page-container {
+  padding: 24px;
+}
+
+.active-link {
+  background-color: rgba(63, 81, 181, 0.1) !important;
+  color: #3f51b5 !important;
+}
