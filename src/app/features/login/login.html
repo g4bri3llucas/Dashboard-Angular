@@ -1,25 +1,39 @@
-<div class="login-container">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Acesso ao Sistema</mat-card-title>
+<div class="login-container" style="background-color: #3f51b5; display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw; margin: 0; padding: 0; position: fixed; top: 0; left: 0;">
+  
+  <mat-card style="width: 400px; padding: 20px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); background: white;">
+    <mat-card-header style="margin-bottom: 20px;">
+      <mat-card-title style="font-family: 'Roboto', sans-serif; font-size: 24px; color: #333;">Acesso ao Sistema</mat-card-title>
     </mat-card-header>
     
     <mat-card-content>
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>E-mail</mat-label>
-        <input matInput placeholder="exemplo@email.com">
-      </mat-form-field>
+      <div style="margin-bottom: 20px;">
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>E-mail</mat-label>
+          <input matInput 
+                 name="email" 
+                 [(ngModel)]="usuario.email" 
+                 placeholder="exemplo@email.com">
+        </mat-form-field>
+      </div>
 
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Senha</mat-label>
-        <input matInput type="password">
-      </mat-form-field>
+      <div style="margin-bottom: 20px;">
+        <mat-form-field appearance="outline" style="width: 100%;">
+          <mat-label>Senha</mat-label>
+          <input matInput 
+                 name="senha" 
+                 type="password" 
+                 [(ngModel)]="usuario.senha">
+        </mat-form-field>
+      </div>
     </mat-card-content>
 
-    <mat-card-actions>
-      <button mat-raised-button color="primary" class="full-width" (click)="entrar()">
-  ENTRAR
-</button>
+    <mat-card-actions style="padding: 0 16px 16px 16px;">
+      <button mat-raised-button color="primary" 
+              style="width: 100%; height: 45px; font-weight: bold; font-size: 16px;" 
+              (click)="entrar()">
+        ENTRAR
+      </button>
     </mat-card-actions>
   </mat-card>
+
 </div>

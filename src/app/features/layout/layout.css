@@ -1,0 +1,16 @@
+.sidenav-container {
+  height: calc(100vh - 64px); /* Desconta a altura da barra de topo */
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #fafafa;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  padding: 20px;
+}

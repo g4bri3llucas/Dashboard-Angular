@@ -1,1 +1,29 @@
-<p>layout works!</p>
+<mat-toolbar color="primary" style="display: flex; justify-content: space-between; background-color: #3f51b5; color: white;">
+  <div style="display: flex; align-items: center;">
+    <button mat-icon-button (click)="drawer.toggle()" style="margin-right: 8px; background: none; border: none; color: white; cursor: pointer;">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span style="font-weight: 500; font-size: 20px;">Meu Sistema Dashboard</span>
+  </div>
+  
+  <button mat-icon-button routerLink="/login" style="background: none; border: none; color: white; cursor: pointer;">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container style="height: calc(100vh - 64px); background-color: #f5f5f5;">
+  <mat-sidenav #drawer mode="side" opened style="width: 240px; background-color: white; border-right: 1px solid #ddd;">
+    <mat-nav-list style="padding-top: 0;">
+      <a mat-list-item routerLink="/dashboard" style="display: flex; align-items: center; padding: 15px; text-decoration: none; color: #333; border-bottom: 1px solid #eee;">
+        <mat-icon style="margin-right: 16px; color: #757575;">dashboard</mat-icon>
+        <span style="font-weight: 500;">Dashboard</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content style="padding: 24px;">
+    <div style="background: white; min-height: 80vh; border-radius: 8px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

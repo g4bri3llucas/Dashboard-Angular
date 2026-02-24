@@ -1,9 +1,10 @@
 .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  background-color: #e0e0e0 !important; /* Um cinza mais escuro para testar */
 }
 
 mat-card {
