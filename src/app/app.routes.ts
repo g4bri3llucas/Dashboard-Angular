@@ -1,22 +1,17 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './features/login/login.component';
-import { LayoutComponent } from './features/layout/layout.component';
-import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { Login } from './features/login/login';
+import { Layout } from './features/layout/layout';
+import { Dashboard } from './features/dashboard/dashboard';
 
 export const routes: Routes = [
-  // 1. Quando o endereço for /login, mostra o LoginComponent
-  { path: 'login', component: LoginComponent },
-
-  // 2. Quando o endereço estiver vazio, mostra o Layout e o Dashboard dentro dele
+  { path: 'login', component: Login },
   {
     path: '',
-    component: LayoutComponent,
+    component: Layout,
     children: [
-      { path: 'dashboard', component: DashboardComponent },
+      { path: 'dashboard', component: Dashboard },
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   },
-
-  // 3. Se digitar qualquer coisa errada, volta para o login
   { path: '**', redirectTo: 'login' }
 ];
