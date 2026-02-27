@@ -1,16 +1,15 @@
-.sidenav-container {
-  height: calc(100vh - 64px); /* Desconta a altura da barra de topo */
+/* Força total na cor branca do texto */
+::ng-deep .menu-item-dark .mdc-list-item__primary-text {
+  color: #ffffff !important;
+  opacity: 1 !important;
 }
 
-.sidenav {
-  width: 200px;
-  background-color: #fafafa;
+/* Garante que o span direto também receba a cor */
+.menu-item-dark span {
+  color: #ffffff !important;
 }
 
-.spacer {
-  flex: 1 1 auto;
-}
-
-.content {
-  padding: 20px;
+/* Hover para fundo leve */
+.menu-item-dark:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
 }

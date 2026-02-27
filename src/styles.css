@@ -1,14 +1,54 @@
-/* Importação corrigida sem o ~ */
+/* Importação do tema */
 @import "@angular/material/prebuilt-themes/azure-blue.css";
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-html, body { 
-  height: 100%; 
-  margin: 0; 
+/* --- DARK MODE GLOBAL --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #121212 !important; /* */
+  color: #e0e0e0 !important;              /* */
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-body { 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
-  background-color: #fafafa;
+/* --- AJUSTES DO ANGULAR MATERIAL (MDC) --- */
+
+/* FORÇA BRANCO NO TÍTULO DO MENU */
+body .mat-mdc-list-item .mat-mdc-list-item-content .mat-mdc-list-item-title {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
+}
+
+/* Garante que o container do item também fique branco */
+body .mat-mdc-list-item {
+  color: #ffffff !important;
+}
+
+/* Ícones */
+body .mat-mdc-list-item .mat-icon {
+  color: #bb86fc !important;
+}
+
+/* Fundo do menu */
+.mat-drawer, .mat-sidenav {
+  background-color: #1e1e1e !important;
+  border-right: 1px solid #333 !important;
+}
+
+/* Fundo do conteúdo */
+.mat-drawer-content {
+  background-color: #121212 !important;
+}
+
+/* Barra superior */
+.mat-toolbar {
+  background-color: #1f1f1f !important;
+  color: white !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Hover */
+body .mat-mdc-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
 }

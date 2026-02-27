@@ -1,23 +1,35 @@
-<h2 style="color: #3f51b5;">Resumo de Vendas</h2>
+<div style="background-color: #121212; min-height: 100vh; padding: 20px; color: #e0e0e0; font-family: 'Segoe UI', Roboto, sans-serif;">
+  
+  <h2 style="color: #bb86fc; margin-top: 0; font-weight: 300;">Dashboard Executivo</h2>
+  <p style="color: #b0b0b0; margin-bottom: 30px;">Visão geral do desempenho em modo escuro.</p>
 
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px;">
-<div style="background: #e3f2fd; padding: 20px; border-radius: 8px; border-left: 5px solid #2196f3;">
-<small>Vendas Hoje</small>
-<h3 style="margin: 5px 0;">R$ 1.250,00</h3>
-</div>
-<div style="background: #f1f8e9; padding: 20px; border-radius: 8px; border-left: 5px solid #4caf50;">
-<small>Novos Clientes</small>
-<h3 style="margin: 5px 0;">12</h3>
-</div>
-<div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 5px solid #ff9800;">
-<small>Alertas</small>
-<h3 style="margin: 5px 0;">2</h3>
-</div>
-</div>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+    
+    <div style="background: #1e1e1e; padding: 20px; border-radius: 12px; border-left: 5px solid #03dac6; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+      <small style="color: #03dac6; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Vendas Hoje</small>
+      <h3 style="margin: 10px 0; font-size: 24px;">R$ 1.250,00</h3>
+      <span style="color: #4caf50; font-size: 12px;">▲ 12% em relação a ontem</span>
+    </div>
 
-<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-<h3 style="margin-bottom: 20px;">Análise de Desempenho</h3>
-<div style="height: 350px; position: relative;">
-<canvas #graficoCanvas></canvas>
-</div>
+    <div style="background: #1e1e1e; padding: 20px; border-radius: 12px; border-left: 5px solid #bb86fc; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+      <small style="color: #bb86fc; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Novos Clientes</small>
+      <h3 style="margin: 10px 0; font-size: 24px;">12</h3>
+      <span style="color: #4caf50; font-size: 12px;">▲ 5% este mês</span>
+    </div>
+
+    <div style="background: #1e1e1e; padding: 20px; border-radius: 12px; border-left: 5px solid #cf6679; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+      <small style="color: #cf6679; text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Alertas</small>
+      <h3 style="margin: 10px 0; font-size: 24px;">2</h3>
+      <span style="color: #cf6679; font-size: 12px;">Ações necessárias</span>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 30px; background: #1e1e1e; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <h3 style="color: #e0e0e0; margin-bottom: 25px; font-weight: 400;">Análise de Receita Semanal</h3>
+    <div style="height: 350px; position: relative;">
+      <canvas #graficoCanvas></canvas>
+    </div>
+  </div>
+
 </div>
